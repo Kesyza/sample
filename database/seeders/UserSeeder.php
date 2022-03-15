@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         //membuat sample role
         $adminRole = new role();
         $adminRole->name = "admin";
-        $adminRole->display_name = "Administrator";
+        $adminRole->display_name = "Admin Tokoku";
         $adminRole->save();
 
         $petugasRole = new role();
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
         //membuat sample user
         $admin = new User();
         $admin->name = 'Admin';
-        $admin->email = 'admin@gmail.com';
+        $admin->email = 'admintokoku@gmail.com';
         $admin->password = Hash::make('12345678');
         $admin->save();
         $admin->attachRole($adminRole);
